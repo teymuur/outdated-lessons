@@ -1,299 +1,499 @@
 const outdatedFacts = {
-    1975: [
-        "The world will face severe overpopulation crises by the year 2000.",
-        "Nuclear power will become the primary energy source globally.",
-        "Computers will remain expensive and inaccessible for the average household.",
-        "Robotic technology will become advanced enough to replace human labor in most industries."
-    ],
-    1976: [
-        "Space exploration will lead to the colonization of the Moon by the end of the century.",
-        "The personal computer will never become a household necessity.",
-        "Global warming will not be a major concern for future generations.",
-        "Television will remain the dominant form of media for decades to come."
-    ],
-    1977: [
-        "Telephones will continue to be largely landline-based with no significant advancements.",
-        "Artificial intelligence will remain a theoretical concept with no practical applications.",
-        "Global food shortages will be a major issue by the year 2000.",
-        "The energy crisis will persist with no significant breakthroughs in alternative energy sources."
-    ],
-    1978: [
-        "Flying cars will be a common mode of transportation by the year 2000.",
-        "The Soviet Union will continue as a global superpower indefinitely.",
-        "Robots will handle most household chores by the early 2000s.",
-        "The human lifespan will be significantly extended through medical advancements by 2000."
-    ],
-    1979: [
-        "The Internet will never become more than a niche tool for researchers.",
-        "Nuclear war is considered inevitable within the next few decades.",
-        "The energy crisis will be resolved through the widespread adoption of nuclear energy.",
-        "Personal computers will remain primarily a tool for businesses and academia."
-    ],
-    1980: [
-        "Computers will not be able to perform tasks beyond basic calculations and data processing.",
-        "The ozone layer will be completely depleted by 2000, leading to severe environmental damage.",
-        "Video games will be a passing fad and not a significant part of entertainment culture.",
-        "The Cold War will continue indefinitely without resolution."
-    ],
-    1981: [
-        "Acid rain will render all lakes too acidic for fish by 2000.",
-        "Video games will not be a lasting form of entertainment.",
-        "Computers will never be compact enough for personal use in the home.",
-        "The Soviet Union will outlast the United States as a global superpower."
-    ],
-    1982: [
-        "Nuclear war between the US and USSR is inevitable within the decade.",
-        "Japan's economy will surpass the US economy by the year 2000.",
-        "The ozone layer will be completely depleted by 2000, causing catastrophic environmental effects.",
-        "Betamax will become the dominant video format over VHS."
-    ],
-    1983: [
-        "Cabbage Patch Kids dolls will continue to be highly valuable collectibles indefinitely.",
-        "The US will fully adopt the metric system by 1990.",
-        "Personal computers will remain too complex for average consumers to use effectively.",
-        "New Coke will permanently replace the original Coca-Cola formula."
-    ],
-    1984: [
-        "George Orwell's dystopian vision of totalitarian control will become reality.",
-        "The Cold War will last indefinitely without resolution.",
-        "Artificial intelligence will surpass human intelligence by the year 2000.",
-        "Flying cars will be a common mode of transportation by the turn of the century."
-    ],
-    1985: [
-        "The Internet will remain a specialized tool only used by academics and researchers.",
-        "The world population will stabilize at around 5 billion by 2000.",
-        "Robots will manage most manual labor tasks by the year 2000.",
-        "Personal computers will be reserved for business use rather than home use."
-    ],
-    1986: [
-        "Nuclear energy will become the primary source of power worldwide.",
-        "Virtual reality will become a mainstream technology within the decade.",
-        "Television will be rendered obsolete by emerging new media.",
-        "The US economy will collapse under the weight of budget deficits by 2000."
-    ],
-    1987: [
-        "Cabbage Patch Kids will retain their value as highly sought-after collectibles.",
-        "The US will transition to a fully metric system by 1990.",
-        "Personal computers will remain too complex for the average person.",
-        "New Coke will replace the original Coca-Cola formula permanently."
-    ],
-    1988: [
-        "Human genetic engineering will lead to designer babies becoming common.",
-        "Space travel will be routine with commercial flights available within a decade.",
-        "The Internet will fail to achieve widespread adoption.",
-        "Global travel will be restricted and less common due to safety concerns."
-    ],
-    1989: [
-        "The Soviet Union will not collapse and will continue as a superpower.",
-        "Robots will replace most human jobs by the turn of the century.",
-        "Global population will be controlled by government policies by 2000.",
-        "Electronic money will not surpass cash and credit cards."
-    ],
-    1990: [
-        "Nuclear fusion will be a practical and widely used energy source by the end of the decade.",
-        "Digital cameras will not surpass film cameras in quality or popularity.",
-        "Human space colonization will begin by the year 2000.",
-        "Fax machines will remain the primary method of communication."
-    ],
-    1991: [
-        "The World Wide Web will never become a significant part of daily life.",
-        "Global warming will not have a major impact before 2050.",
-        "Television will remain the dominant medium for entertainment and news.",
-        "The economic impact of the Gulf War will be minimal and short-lived."
-    ],
-    1992: [
-        "AI will remain largely theoretical with no practical applications.",
-        "Virtual reality will not have a significant impact on gaming or entertainment.",
-        "The Internet will stay a niche technology with limited use.",
-        "Global food shortages will not be a major issue in the near future."
-    ],
-    1993: [
-        "Digital media will not surpass physical media in terms of popularity.",
-        "The stock market will not experience a major crash in the coming years.",
-        "The human genome project will not lead to significant breakthroughs in medicine.",
-        "Smartphones will remain a niche product with limited market reach."
-    ],
-    1994: [
-        "3D printing technology will not advance significantly in the near future.",
-        "The Cold War tensions will re-emerge by the year 2000.",
-        "Severe global resource shortages will occur by 2020.",
-        "Telecommuting will remain impractical and rarely used."
-    ],
-    1995: [
-        "The Internet will remain too expensive and complex for widespread use.",
-        "Robotics will remain limited to basic industrial applications.",
-        "Global warming will not be a significant concern before 2020.",
-        "Television will continue to be the primary source of news and entertainment."
-    ],
-    1996: [
-        "Mobile phones will remain a luxury item due to high costs and size.",
-        "Personal digital assistants (PDAs) will be the primary technology for personal use.",
-        "The US will continue to lead in technological innovation indefinitely.",
-        "Public transportation will become less relevant due to advancements in personal vehicles."
-    ],
-    1997: [
-        "The Internet bubble will burst and cause a major economic downturn.",
-        "Personal robots will become household staples within a decade.",
-        "Virtual reality will not significantly impact the gaming industry.",
-        "Online privacy will remain adequately protected by current technology."
-    ],
-    1998: [
-        "The world will not see significant advancements in space exploration.",
-        "Artificial intelligence will not achieve practical applications in everyday life.",
-        "Online privacy concerns will be resolved with existing technology.",
-        "Renewable energy will not see significant adoption by the end of the decade."
-    ],
-    1999: [
-        "The Y2K bug will cause widespread technological failures.",
-        "The stock market will experience a catastrophic crash at the turn of the millennium.",
-        "The Internet will not become a dominant platform for business and social interaction.",
-        "Global climate change will have a less significant impact than anticipated."
-    ],
-    2000: [
-        "The Y2K bug will cause major disruptions globally.",
-        "Human cloning will become a common medical procedure by the mid-2000s.",
-        "Flying cars will be a common mode of transportation by the end of the decade.",
-        "Space tourism will become affordable for the average person."
-    ],
-    2001: [
-        "The Internet bubble burst will lead to a major economic downturn.",
-        "Artificial intelligence will remain a niche technology with limited practical applications.",
-        "Personal robots will not become mainstream household items.",
-        "The global economy will collapse due to the aftermath of the 9/11 attacks."
-    ],
-    2002: [
-        "The human genome project will immediately revolutionize personalized medicine.",
-        "Online privacy will be effectively secured with advancements in technology.",
-        "Green technology will become mainstream without significant changes.",
-        "Space tourism will remain a luxury for the elite."
-    ],
-    2003: [
-        "Mobile phones will remain expensive and not widespread.",
-        "Renewable energy sources will not make significant progress in adoption.",
-        "Artificial intelligence will not achieve practical applications in daily life.",
-        "Traditional media will remain dominant over digital media."
-    ],
-    2004: [
-        "Social media will not significantly impact business or communication.",
-        "Renewable energy will not become a major part of the energy mix.",
-        "Artificial intelligence will not surpass current technological limits.",
-        "Space exploration will remain limited to government agencies."
-    ],
-    2005: [
-        "The global economic growth will continue without major disruptions.",
-        "Online gaming will not surpass traditional gaming consoles in popularity.",
-        "Mobile internet will remain slow and unreliable.",
-        "Renewable energy sources will not become cost-competitive with fossil fuels."
-    ],
-    2006: [
-        "Social networking sites will not become significant business tools.",
-        "Digital media will not fully replace traditional media by 2010.",
-        "Artificial intelligence will not achieve human-like capabilities.",
-        "Space colonization will remain a distant goal."
-    ],
-    2007: [
-        "The rise of smartphones will not significantly change personal computing habits.",
-        "The economic impact of the 2008 financial crisis will be minimal.",
-        "Online privacy will be adequately protected by existing technology.",
-        "Renewable energy sources will not become mainstream."
-    ],
-    2008: [
-        "Economic recovery will be swift and robust following the 2008 crisis.",
-        "Artificial intelligence will not surpass human intelligence within the decade.",
-        "Social media will not change the way people interact significantly.",
-        "Renewable energy will remain a niche market."
-    ],
-    2009: [
-        "The global economic recession will be resolved quickly.",
-        "Smartphones will remain a luxury item for the wealthy.",
-        "Green technologies will not become mainstream by 2020.",
-        "Space exploration will not see significant advances in the next decade."
-    ],
-    2010: [
-        "Online privacy will be fully secured by advancements in technology.",
-        "Renewable energy will not be adopted at a large scale.",
-        "Social media will not significantly impact traditional media.",
-        "Self-driving cars will remain a concept without practical applications."
-    ],
-    2011: [
-        "Economic recovery will be swift and robust after the 2008 crisis.",
-        "Artificial intelligence will not become a significant part of everyday life.",
-        "Mobile technology will not evolve significantly in the near future.",
-        "The impact of climate change will be minimal by 2020."
-    ],
-    2012: [
-        "Significant advancements in space exploration will occur in the near future.",
-        "Renewable energy will not become a dominant source of power.",
-        "Social media will not have a major impact on politics.",
-        "Smart technology will remain a niche market."
-    ],
-    2013: [
-        "The economic impact of the global financial crisis will continue to worsen.",
-        "Artificial intelligence will not achieve significant advancements.",
-        "Renewable energy sources will not replace fossil fuels in the near future.",
-        "Self-driving cars will not become widespread."
-    ],
-    2014: [
-        "Social media will not significantly influence global events.",
-        "Renewable energy will not see major growth in adoption.",
-        "Artificial intelligence will not become more advanced.",
-        "The global economy will face significant challenges."
-    ],
-    2015: [
-        "Virtual reality will not become mainstream.",
-        "The global economy will face another major crisis.",
-        "Artificial intelligence will not achieve significant breakthroughs.",
-        "Self-driving cars will not become common on the roads."
-    ],
-    2016: [
-        "Artificial intelligence will have minimal impact on the job market.",
-        "Renewable energy will not see significant cost reductions.",
-        "The global economy will remain unstable.",
-        "Space travel will not become more accessible."
-    ],
-    2017: [
-        "Artificial intelligence will not achieve human-like capabilities.",
-        "Renewable energy will not be widely adopted.",
-        "Social media will not have a major impact on global events.",
-        "The global economy will face significant challenges."
-    ],
-    2018: [
-        "Self-driving cars will not become mainstream.",
-        "Renewable energy will not surpass fossil fuels.",
-        "The impact of social media on politics will be minimal.",
-        "Artificial intelligence will not advance significantly."
-    ],
-    2019: [
-        "The COVID-19 pandemic will not have a significant long-term impact.",
-        "Cryptocurrency will not replace traditional financial systems.",
-        "Artificial intelligence will not achieve human-like intelligence.",
-        "Climate change will not have a major impact on global weather patterns."
-    ],
-    2020: [
-        "The pandemic will be resolved quickly with minimal long-term effects.",
-        "Remote work will not become a long-term trend.",
-        "Artificial intelligence will not significantly impact daily life.",
-        "Renewable energy will not see significant adoption in the near future."
-    ],
-    2021: [
-        "The COVID-19 pandemic will be fully under control by the end of the year.",
-        "Remote work will not become a permanent fixture.",
-        "Artificial intelligence will not achieve breakthroughs.",
-        "Cryptocurrency will not become mainstream."
-    ],
-    2022: [
-        "The effects of climate change will not be severe by mid-century.",
-        "Artificial intelligence will not significantly alter industries.",
-        "Remote work will not remain prevalent.",
-        "Global economic instability will be minimal."
-    ],
-    2023: [
-        "COVID-19 will be completely eradicated globally by the end of the year.",
-        "Cryptocurrency will fully replace traditional banking for most people.",
-        "Self-driving cars will dominate roads in major cities.",
-        "Virtual and augmented reality will replace smartphones as the primary personal computing device."
-    ]
-};
+   
+
+1975: [
+    `<b>Fact</b>: Pluto was classified as a major planet.  
+      <b>Current Understanding</b>: Pluto is now classified as a "dwarf planet.`,
+   
+    `<b>Fact</b>: The human genome was believed to have approximately 100,000 genes.  
+      <b>Current Understanding</b>: The Human Genome Project revealed that the human genome has about 20,000–25,000 genes`,
+   
+    `<b>Fact</b>: The universe was considered to be static and unchanging.  
+      <b>Current Understanding</b>: The universe is expanding, as evidenced by observations of distant galaxies and cosmic background radiation`,
+   ],
+   1976: [
+    `<b>Fact</b>: The idea that dietary cholesterol significantly impacts blood cholesterol levels.  
+      <b>Current Understanding</b>: Recent research shows that dietary cholesterol has a relatively minor impact on blood cholesterol levels compared to saturated and trans fats`,
+   
+    `<b>Fact</b>: The theory of "spontaneous generation" was still debated in some scientific circles.  
+      <b>Current Understanding</b>: The theory has been completely discredited; life arises from pre-existing life, not spontaneously from non-living matter`,
+   
+    `<b>Fact</b>: The common belief that antibiotics can cure viral infections.  
+      <b>Current Understanding</b>: Antibiotics are effective against bacterial infections but not against viral infections`,
+   ],
+   1977: [
+    `<b>Fact</b>: The concept of "junk DNA" was widely accepted, thought to be non-functional.  
+      <b>Current Understanding</b>: Many non-coding regions of DNA are now known to play important roles in gene regulation and cellular processes`,
+   
+    `<b>Fact</b>: The idea that the Earth’s core was solid throughout.  
+      <b>Current Understanding</b>: The Earth's core consists of a solid inner core and a liquid outer core`,
+   
+    `<b>Fact</b>: The belief that smoking only had minor health risks.  
+      <b>Current Understanding</b>: Smoking is well-documented as a major cause of numerous health issues, including cancer and cardiovascular disease`,
+   ],
+   1978: [
+    `<b>Fact</b>: The belief that the human brain was only capable of generating new neurons in very limited areas.  
+      <b>Current Understanding</b>: Neurogenesis, the creation of new neurons, occurs in several areas of the brain, including the hippocampus`,
+   
+    `<b>Fact</b>: The assumption that all cancers were caused by environmental factors alone.  
+      <b>Current Understanding</b>: Genetics play a significant role in cancer susceptibility alongside environmental factors`,
+   
+    `<b>Fact</b>: The idea that the Earth’s ozone layer was not significantly impacted by human activities.  
+      <b>Current Understanding</b>: Human activities, particularly the emission of CFCs, have significantly depleted the ozone layer`,
+   ],
+   1979: [
+    `<b>Fact</b>: The notion that a single gene could directly cause a complex trait or disease.  
+      <b>Current Understanding</b>: Most traits and diseases are influenced by multiple genes and their interactions with the environment`,
+   
+    `<b>Fact</b>: The belief that intelligence was solely determined by genetics.  
+      <b>Current Understanding</b>: Intelligence is influenced by both genetic factors and environmental conditions, including education and social environment`,
+   
+    `<b>Fact</b>: The idea that the HIV virus was not yet known or studied.  
+      <b>Current Understanding</b>: The HIV virus was identified in the early 1980s, leading to significant advances in the understanding and treatment of AIDS`,
+   ],
+   1980: [
+    `<b>Fact</b>: The Brontosaurus was considered a valid genus.  
+      <b>Current Understanding</b>: Brontosaurus is now considered a synonym of Apatosaurus, though recent research has revived its status as a distinct genus`,
+   
+    `<b>Fact</b>: Continental drift was not widely accepted.  
+      <b>Current Understanding</b>: The theory of plate tectonics, which encompasses continental drift, is now widely accepted and supported by extensive geological evidence`,
+   
+    `<b>Fact</b>: The idea that dinosaurs were cold-blooded reptiles.  
+      <b>Current Understanding</b>: Many dinosaurs are now believed to have been warm-blooded or had some form of intermediate metabolic rate`,
+   ],
+   1981: [
+    `<b>Fact</b>: The assumption that all human genes were already discovered and mapped.  
+      <b>Current Understanding</b>: The complexity of the human genome and gene interactions is still being explored and understood`,
+   
+    `<b>Fact</b>: The belief that the universe was too small to contain multiple galaxies.  
+      <b>Current Understanding</b>: The universe contains billions of galaxies, as confirmed by modern telescopes`,
+   
+    `<b>Fact</b>: The notion that the human population would not exceed certain thresholds.  
+      <b>Current Understanding</b>: The human population has exceeded 8 billion, with significant growth and demographic changes`,
+   ],
+   1982: [
+    `<b>Fact</b>: The idea that the brain was fully developed by early adulthood.  
+      <b>Current Understanding</b>: The brain continues to develop well into the mid-20s, particularly the prefrontal cortex`,
+   
+    `<b>Fact</b>: The belief that the continental crust was uniform in thickness.  
+      <b>Current Understanding</b>: The continental crust varies in thickness and composition across different regions`,
+   
+    `<b>Fact</b>: The assumption that the Arctic region was too inhospitable for significant research.  
+      <b>Current Understanding</b>: The Arctic is actively studied, with significant findings related to climate change and ecology`,
+   ],
+   1983: [
+    `<b>Fact</b>: The idea that cellular DNA was solely responsible for genetic information transfer.  
+      <b>Current Understanding</b>: RNA also plays a critical role in the transfer and regulation of genetic information`,
+   
+    `<b>Fact</b>: The belief that human activity had minimal impact on atmospheric CO2 levels.  
+      <b>Current Understanding</b>: Human activities are a major driver of increased CO2 levels and climate change`,
+   
+    `<b>Fact</b>: The assumption that the universe had a static structure with no expansion.  
+      <b>Current Understanding</b>: The universe is expanding, as evidenced by observations of distant galaxies and cosmic background radiation`,
+   ],
+   1984: [
+    `<b>Fact</b>: The belief that the Earth’s magnetic field was stable and unchanging.  
+      <b>Current Understanding</b>: The Earth's magnetic field undergoes gradual changes and has reversed polarity multiple times`,
+   
+    `<b>Fact</b>: The idea that all diseases were either bacterial or viral.  
+      <b>Current Understanding</b>: Many diseases are now known to be caused by a range of factors, including genetic and environmental`,
+   
+    `<b>Fact</b>: The belief that technology would not advance significantly beyond current computing capabilities.  
+      <b>Current Understanding</b>: Technology has advanced rapidly, with significant developments in computing, AI, and electronics`,
+   ],
+   1985: [
+    `<b>Fact</b>: The belief that stem cell research was highly controversial and unproven.  
+      <b>Current Understanding</b>: Stem cell research has become a significant field with promising applications in medicine and therapy`,
+   
+    `<b>Fact</b>: The idea that dark matter and dark energy were not widely accepted or understood.  
+      <b>Current Understanding</b>: Dark matter and dark energy are now fundamental concepts in cosmology`,
+   
+    `<b>Fact</b>: The idea that the Earth’s climate was too complex to predict future changes accurately.  
+      <b>Current Understanding</b>: Climate models have improved, providing increasingly accurate predictions of future climate changes`,
+   ],
+   1986: [
+    `<b>Fact</b>: The belief that all continents were permanently fixed in place.  
+      <b>Current Understanding</b>: Tectonic plates are constantly moving, which influences geological processes and events`,
+   
+    `<b>Fact</b>: The idea that the human brain's capacity for memory and learning was fixed.  
+      <b>Current Understanding</b>: Neuroplasticity shows that the brain can adapt and change in response to learning and experience`,
+   
+    `<b>Fact</b>: The assumption that cancer was solely a result of external factors like radiation and chemicals.  
+      <b>Current Understanding</b>: Genetic mutations also play a crucial role in the development of cancer`,
+   ],
+   1987: [
+    `<b>Fact</b>: The idea that the Amazon rainforest was too vast to be significantly impacted by human activities.  
+      <b>Current Understanding</b>: The Amazon rainforest is critically endangered due to deforestation and climate change`,
+   
+    `<b>Fact</b>: The belief that human cognitive abilities were fixed and not subject to change.  
+      <b>Current Understanding</b>: Cognitive abilities can be improved and changed through various forms of training and stimulation`,
+   
+    `<b>Fact</b>: The notion that the ozone layer was not being significantly affected by human activities.  
+      <b>Current Understanding</b>: Human activities, particularly CFC emissions, have significantly depleted the ozone layer`,
+   ],
+   1988: [
+    `<b>Fact</b>: The belief that the human brain was limited in its ability to process information.  
+      <b>Current Understanding</b>: Advances in neuroscience show that the brain has remarkable capacity for information processing and adaptation`,
+   
+    `<b>Fact</b>: The idea that all viruses had to be either DNA or RNA-based.  
+      <b>Current Understanding</b>: Viruses can have various structures and replication mechanisms, including complex RNA-based systems`,
+   
+    `<b>Fact</b>: The assumption that nuclear energy was too dangerous and inefficient for widespread use.  
+      <b>Current Understanding</b>: Nuclear energy is a significant and debated source of low-carbon energy, with ongoing developments in safety and efficiency`,
+   ],
+   1989: [
+    `<b>Fact</b>: The belief that the polar ice caps were not significantly affected by global warming.  
+      <b>Current Understanding</b>: The polar ice caps are experiencing significant melting due to global warming`,
+   
+    `<b>Fact</b>: The idea that human memory was static and not subject to improvement or decline.  
+      <b>Current Understanding</b>: Memory can be enhanced through various techniques and is also subject to natural decline with age`,
+   
+    `<b>Fact</b>: The notion that diseases like HIV/AIDS were primarily confined to specific regions or demographics.  
+      <b>Current Understanding</b>: HIV/AIDS is a global pandemic affecting diverse populations`,
+   ],
+   1990: [
+   ` <b>Fact</b>: The idea that human cells could not regenerate or heal beyond certain limits.  
+      <b>Cuent Understanding</b>: Cells have the ability to regenerate and repair, though there are limits depending on the type and extent of damage.`,
+   
+   `<b>Fact</b>: The belief that the Internet was a passing trend. 
+      <b>Curent Understanding</b>: The Internet has become a crucial part of global infrastructure and daily life.`,
+   
+   `<b>Fact</b>: The assumption that genes were the sole determinants of human traits.  
+      <b>Current Understanding</b>: Gene-environment interactions play a crucial role in determining traits`,
+   ],
+   1991: [
+    `<b>Fact</b>: The idea that all galaxies were similar in structure and composition.  
+      <b>Current Understanding</b>: Galaxies vary widely in structure, size, and composition, with many different types identified`,
+   
+    `<b>Fact</b>: The belief that human aging was primarily a result of wear and tear rather than biological processes.  
+      <b>Current Understanding</b>: Aging is influenced by complex biological processes, including genetic and cellular factors`,
+   
+    `<b>Fact</b>: The assumption that personal computers would remain a niche technology.  
+      <b>Current Understanding</b>: Personal computers have become ubiquitous and essential in modern life`,
+   ],
+   1992: [
+    `<b>Fact</b>: The belief that all bacteria were harmful to humans.  
+      <b>Current Understanding</b>: Many bacteria are beneficial and essential for processes such as digestion and immunity`,
+   
+    `<b>Fact</b>: The idea that human intelligence could be fully understood and measured by IQ tests.  
+      <b>Current Understanding</b>: Intelligence is multi-faceted and cannot be fully captured by a single measure like IQ`,
+   
+    `<b>Fact</b>: The assumption that the ecosystem was stable and not significantly impacted by human activities.  
+      <b>Current Understanding</b>: Ecosystems are highly dynamic and increasingly affected by human actions such as deforestation and pollution`,
+   ],
+   1993: [
+    `<b>Fact</b>: The belief that the human genome was completely mapped and understood.  
+      <b>Current Understanding</b>: The complexity of the human genome and its interactions continues to be studied and discovered`,
+   
+    `<b>Fact</b>: The idea that cancer could only be treated effectively with conventional methods like surgery and chemotherapy.  
+      <b>Current Understanding</b>: Advances in targeted therapies, immunotherapies, and personalized medicine are transforming cancer treatment`,
+   
+    `<b>Fact</b>: The assumption that climate change was a distant issue with limited immediate impact.  
+      <b>Current Understanding</b>: Climate change has become an urgent and immediate global issue with widespread impacts`,
+   ],
+   1994: [
+    `<b>Fact</b>: The belief that the structure of the human brain was relatively fixed and unchanging.  
+      <b>Current Understanding</b>: The brain is highly plastic and can adapt and reorganize in response to learning and experience`,
+   
+    `<b>Fact</b>: The idea that space exploration would be limited to low-Earth orbit.  
+      <b>Current Understanding</b>: Space exploration has expanded to include missions to the Moon, Mars, and beyond`,
+   
+    `<b>Fact</b>: The assumption that genetics was the sole factor in determining susceptibility to diseases.  
+      <b>Current Understanding</b>: Both genetics and environmental factors play crucial roles in disease susceptibility`,
+   ],
+   1995: [
+    `<b>Fact</b>: The belief that "cold fusion" was a viable and imminent breakthrough in energy production.  
+      <b>Current Understanding</b>: Cold fusion has not been substantiated as a practical or reliable energy source`,
+   
+    `<b>Fact</b>: The notion that the Earth’s atmosphere was stable and unchanging.  
+      <b>Current Understanding</b>: The atmosphere is dynamic and subject to significant changes due to natural and human-induced factors`,
+   
+    `<b>Fact</b>: The idea that all viruses were either bacterial or viral.  
+      <b>Current Understanding</b>: The classification of viruses is more complex, with various types and subtypes discovered`,
+   ],
+   1996: [
+    `<b>Fact</b>: The assumption that human evolutionary history was fully understood and complete.  
+      <b>Current Understanding</b>: New discoveries continue to reshape and expand our understanding of human evolution`,
+   
+    `<b>Fact</b>: The belief that the Moon’s surface was stable and unchanging.  
+      <b>Current Understanding</b>: The Moon’s surface is subject to changes due to meteoroid impacts and other factors`,
+   
+    `<b>Fact</b>: The idea that all types of cells in the human body had similar lifespans and turnover rates.  
+      <b>Current Understanding</b>: Different cell types have varying lifespans and turnover rates, influenced by their functions and environments`,
+   ],
+   1997: [
+    `<b>Fact</b>: The belief that human memory was a static and unchangeable system.  
+      <b>Current Understanding</b>: Memory is dynamic and can be influenced and modified by various factors and experiences`,
+   
+    `<b>Fact</b>: The assumption that all energy sources had equal potential for sustainability.  
+      <b>Current Understanding</b>: Different energy sources have varying potentials for sustainability, with renewable sources being more favorable in the long term`,
+   
+    `<b>Fact</b>: The idea that human beings had fully explored and understood the depths of the ocean.  
+      <b>Current Understanding</b>: The deep ocean remains one of the least explored and understood areas on Earth`,
+   ],
+   1998: [
+    `<b>Fact</b>: The belief that all diseases could be cured with existing medical technologies.  
+      <b>Current Understanding</b>: Many diseases remain challenging to treat, and ongoing research is needed to find effective cures`,
+   
+    `<b>Fact</b>: The assumption that all astronomical objects were similar in structure and composition.  
+      <b>Current Understanding</b>: Astronomical objects exhibit a wide range of structures and compositions`,
+   
+    `<b>Fact</b>: The idea that human activities had a negligible impact on global ecosystems.  
+      <b>Current Understanding</b>: Human activities have significant impacts on global ecosystems and biodiversity`,
+   ],
+   1999: [
+    `<b>Fact</b>: The belief that human genetics was fully mapped and understood.  
+      <b>Current Understanding</b>: The complexity of genetics continues to be explored, with new discoveries about gene function and regulation`,
+   
+    `<b>Fact</b>: The assumption that all diseases were either bacterial or viral.  
+      <b>Current Understanding</b>: Many diseases are influenced by a combination of genetic, environmental, and lifestyle factors`,
+   
+    `<b>Fact</b>: The idea that technology would not significantly change daily life in the near future.  
+      <b>Current Understanding</b>: Technology has drastically changed daily life, with advancements in communication, computing, and automation`,
+   ],
+   2000: [
+    `<b>Fact</b>: The assumption that the Internet would not have a significant impact on various industries.  
+      <b>Current Understanding</b>: The Internet has revolutionized industries such as communication, commerce, and entertainment`,
+   
+    `<b>Fact</b>: The belief that human genetic variation was fully understood and cataloged.  
+      <b>Current Understanding</b>: Human genetic variation is complex and continues to be studied for insights into health and disease`,
+   
+    `<b>Fact</b>: The idea that climate change was a distant issue with minimal impact on current generations.  
+      <b>Current Understanding</b>: Climate change has immediate and significant impacts on global weather patterns, ecosystems, and human societies`,
+   ],
+   2001: [
+    `<b>Fact</b>: The belief that the human brain’s capabilities were well-defined and limited.  
+      <b>Current Understanding</b>: The brain’s capabilities are more flexible and adaptable than previously thought`,
+   
+    `<b>Fact</b>: The assumption that renewable energy sources were not viable for large-scale implementation.  
+      <b>Current Understanding</b>: Renewable energy sources have proven to be viable and increasingly used on a large scale`,
+   
+    `<b>Fact</b>: The idea that all viruses were either bacterial or viral.  
+      <b>Current Understanding</b>: The classification of viruses includes complex and diverse forms beyond simple bacterial or viral categories`,
+   ],
+   2002: [
+    `<b>Fact</b>: The belief that gene therapy was a promising but unproven technology.  
+      <b>Current Understanding</b>: Gene therapy has advanced and is being used for various genetic disorders and conditions`,
+   
+    `<b>Fact</b>: The assumption that artificial intelligence would remain a niche field with limited applications.  
+      <b>Current Understanding</b>: AI has become a major field with wide-ranging applications in various industries and research areas`,
+   
+    `<b>Fact</b>: The idea that the effects of global warming were gradual and not immediately apparent.  
+      <b>Current Understanding</b>: Global warming has led to observable and significant changes in weather patterns, sea levels, and ecosystems`,
+   ],
+   2003: [
+    `<b>Fact</b>: The belief that personal genomics would not be widely accessible or affordable.  
+      <b>Current Understanding</b>: Personal genomics has become more accessible and affordable, with widespread availability of genetic testing services`,
+   
+    `<b>Fact</b>: The assumption that renewable energy technologies would not be competitive with fossil fuels.  
+      <b>Current Understanding</b>: Renewable energy technologies have become competitive with and often cheaper than fossil fuels`,
+   
+    `<b>Fact</b>: The idea that human aging could not be significantly altered or slowed.  
+      <b>Current Understanding</b>: Research into aging has led to discoveries about potential interventions and therapies to influence the aging process`,
+   ],
+   2004: [
+    `<b>Fact</b>: The belief that cloning technology would not be a major focus of research and debate.  
+      <b>Current Understanding</b>: Cloning technology has become a significant area of research with ethical and practical implications`,
+   
+    `<b>Fact</b>: The assumption that the human microbiome’s role in health and disease was not well understood.  
+      <b>Current Understanding</b>: The human microbiome is recognized as playing a crucial role in health and disease, with ongoing research into its complexities`,
+   
+    `<b>Fact</b>: The idea that the impacts of deforestation were not immediately severe.  
+      <b>Current Understanding</b>: Deforestation has significant and immediate impacts on biodiversity, climate, and ecosystems`,
+   ],
+   2005: [
+    `<b>Fact</b>: The belief that stem cell research was highly controversial and limited in its applications.  
+      **Current Understanding**: Stem cell research has expanded significantly with many potential applications and clinical trials underway.`,
+   
+    `<b>Fact</b>: The assumption that the impacts of climate change were too complex to measure accurately.  
+      <b>Current Understanding</b>: Advances in climate science have allowed for more accurate measurement and prediction of climate change impacts`,
+   
+   `<b>Fact</b>: The idea that space exploration would be limited to government agencies and high-cost missions.  
+      <b>Current Understanding</b>: Private companies have become major players in space exploration, reducing costs and expanding possibilities.`,
+   ],
+   2006: [
+    `<b>Fact</b>: The belief that quantum computing was a distant possibility with limited practical applications.  
+      <b>Current Understanding</b>: Quantum computing research has advanced significantly, with potential applications in various fields`,
+   
+    `<b>Fact</b>: The assumption that the human understanding of genetics was nearing completion.  
+      <b>Current Understanding</b>: Genetics research continues to reveal new insights into gene function, interactions, and variations`,
+   
+    `<b>Fact</b>: The idea that global health issues were primarily confined to specific regions or countries.  
+      <b>Current Understanding</b>: Global health issues, such as pandemics, can affect populations worldwide, emphasizing the need for international collaboration`,
+   ],
+   2007: [
+    `<b>Fact</b>: The belief that the potential of nanotechnology was still largely theoretical.  
+      <b>Current Understanding</b>: Nanotechnology has made significant progress with practical applications in medicine, materials science, and electronics`,
+   
+    `<b>Fact</b>: The assumption that environmental sustainability would not become a central global issue.  
+      <b>Current Understanding</b>: Environmental sustainability is a major global concern, with extensive efforts to address climate change and conservation`,
+   
+    `<b>Fact</b>: The idea that human-environment interactions were too complex to fully understand.  
+      <b>Current Understanding</b>: Research has provided valuable insights into how human activities impact the environment and vice versa`,
+   ],
+   2008: [
+    `<b>Fact</b>: The belief that the human brain’s ability to recover from injury was limited.  
+      <b>Current Understanding</b>: The brain has a greater capacity for recovery and adaptation than previously understood, thanks to neuroplasticity`,
+   
+    `<b>Fact</b>: The assumption that the risks of climate change were not immediate or severe.  
+      <b>Current Understanding</b>: The risks of climate change are immediate and severe, affecting weather patterns, sea levels, and ecosystems`,
+   
+    `<b>Fact</b>: The idea that advances in robotics would remain primarily in industrial applications.  
+      <b>Current Understanding</b>: Robotics have expanded into various fields, including healthcare, consumer products, and service industries`,
+   ],
+   2009: [
+    `<b>Fact</b>: The belief that the potential of renewable energy sources was limited.  
+      <b>Current Understanding</b>: Renewable energy sources have proven to be viable and increasingly cost-effective alternatives to fossil fuels`,
+   
+    `<b>Fact</b>: The assumption that the effects of global warming were gradual and not easily observed.  
+      <b>Current Understanding</b>: The effects of global warming are evident through extreme weather events, rising sea levels, and ecosystem changes`,
+   
+    `<b>Fact</b>: The idea that personal data privacy issues would be manageable with existing technologies.  
+      <b>Current Understanding</b>: Data privacy issues have become more complex with the rise of digital technologies and data breaches`,
+   ],
+   2010: [
+    `<b>Fact</b>: The belief that the human microbiome’s role in health was not well understood.  
+      <b>Current Understanding</b>: Research has significantly advanced our understanding of the microbiome’s role in health and disease`,
+   
+    `<b>Fact</b>: The assumption that artificial intelligence would remain limited in its capabilities and applications.  
+      <b>Current Understanding</b>: AI has made substantial progress, with applications in various sectors including healthcare, finance, and autonomous systems`,
+   
+    `<b>Fact</b>: The idea that space exploration would primarily be conducted by government agencies.  
+      <b>Current Understanding</b>: Private companies have become major contributors to space exploration, offering new opportunities and innovations`,
+   ],
+   2011: [
+    `<b>Fact</b>: The belief that climate change was a distant concern with limited immediate effects.  
+      <b>Current Understanding</b>: Climate change has immediate and widespread effects, including extreme weather events and impacts on ecosystems`,
+   
+    `<b>Fact</b>: The assumption that the human brain was fully mapped and understood.  
+      <b>Current Understanding</b>: The brain is more complex than previously thought, with ongoing research revealing new insights into its function and structure`,
+   
+    `<b>Fact</b>: The idea that renewable energy technologies would not be able to meet global energy demands.  
+      <b>Current Understanding</b>: Renewable energy technologies have the potential to meet significant portions of global energy demands and are increasingly deployed`,
+   ],
+   2012: [
+    `<b>Fact</b>: The belief that personal genomics would not have significant practical applications.  
+      <b>Current Understanding</b>: Personal genomics has practical applications in health, ancestry, and personalized medicine`,
+   
+    `<b>Fact</b>: The assumption that advances in AI would not have a significant impact on the workforce.  
+      <b>Current Understanding</b>: AI has already begun to impact various sectors and job markets, with ongoing developments influencing the workforce`,
+   
+    `<b>Fact</b>: The idea that climate change impacts were too complex to predict accurately.  
+      <b>Current Understanding</b>: Climate models and scientific research have provided increasingly accurate predictions of climate change impacts`,
+   ],
+   2013: [
+    `<b>Fact</b>: The belief that the human immune system could not be significantly enhanced or modified.  
+      <b>Current Understanding</b>: Advances in immunotherapy and vaccine development have demonstrated that the immune system can be significantly influenced and enhanced`,
+   
+    `<b>Fact</b>: The assumption that the extent of ocean exploration was sufficient for scientific purposes.  
+      <b>Current Understanding</b>: The deep ocean remains one of the least explored areas, with ongoing research revealing new insights and discoveries`,
+   
+    `<b>Fact</b>: The idea that all diseases could be understood and treated with existing medical technologies.  
+      <b>Current Understanding</b>: Many diseases remain challenging to treat, with ongoing research needed for effective treatments and cures`,
+   ],
+   2014: [
+    `<b>Fact</b>: The belief that gene editing technologies were not yet practical or reliable.  
+      <b>Current Understanding</b>: Gene editing technologies like CRISPR have become practical and are being used in research and clinical applications`,
+   
+    `<b>Fact</b>: The assumption that the impacts of climate change were not immediately apparent.  
+      <b>Current Understanding</b>: Climate change impacts are immediate and observable, affecting weather patterns, sea levels, and ecosystems`,
+   
+    `<b>Fact</b>: The idea that advancements in computing would not significantly change daily life in the near future.  
+      <b>Current Understanding</b>: Advances in computing, including AI and machine learning, have already transformed various aspects of daily life`,
+   ],
+   2015: [
+    `<b>Fact</b>: The belief that the impacts of climate change could be effectively managed with existing policies.  
+      <b>Current Understanding</b>: Climate change requires more aggressive and comprehensive policies to mitigate its impacts and adapt to its effects`,
+   
+    `<b>Fact</b>: The assumption that all technological advancements were incremental and not revolutionary.  
+      <b>Current Understanding</b>: Technological advancements have included revolutionary changes in fields like AI, biotechnology, and energy`,
+   
+    `<b>Fact</b>: The idea that space exploration would not see significant commercial involvement.  
+      <b>Current Understanding</b>: Commercial space exploration has become a major industry, with private companies playing key roles in space missions and technology development`,
+   ],
+   2016: [
+    `<b>Fact</b>: The belief that virtual reality and augmented reality technologies were not yet ready for mainstream adoption.  
+      <b>Current Understanding</b>: VR and AR technologies have gained mainstream acceptance and are used in various fields including gaming, education, and healthcare`,
+   
+    `<b>Fact</b>: The assumption that gene therapies and personalized medicine would remain experimental.  
+      <b>Current Understanding</b>: Gene therapies and personalized medicine have progressed to include approved treatments and widespread research applications`,
+   
+    `<b>Fact</b>: The idea that climate change impacts would primarily be limited to environmental changes.  
+      <b>Current Understanding</b>: Climate change impacts extend to economic, health, and social dimensions, influencing various aspects of human life`,
+   ],
+   2017: [
+    `<b>Fact</b>: The belief that blockchain technology was primarily applicable to cryptocurrencies.  
+      <b>Current Understanding</b>: Blockchain technology has diverse applications beyond cryptocurrencies, including supply chain management and digital identity verification`,
+   
+    `<b>Fact</b>: The assumption that AI would not achieve human-level cognitive capabilities in the near future.  
+      <b>Current Understanding</b>: AI has made significant strides, with advanced capabilities in language processing, image recognition, and decision-making`,
+   
+    `<b>Fact</b>: The idea that climate change was a gradual issue with limited immediate effects.  
+      <b>Current Understanding</b>: Climate change has immediate and significant effects, including extreme weather events and impacts on ecosystems and human societies`,
+   ],
+   2018: [
+    `<b>Fact</b>: The belief that CRISPR and other gene-editing technologies would not become widely available.  
+      <b>Current Understanding</b>: Gene-editing technologies like CRISPR are becoming increasingly available and are used in research and clinical applications`,
+   
+    `<b>Fact</b>: The assumption that renewable energy sources could not yet provide a significant portion of global energy needs.  
+      <b>Current Understanding</b>: Renewable energy sources are providing a growing portion of global energy needs and are becoming more economically viable`,
+   
+    `<b>Fact</b>: The idea that the impacts of climate change on biodiversity were not fully understood.  
+      <b>Current Understanding</b>: The impacts of climate change on biodiversity are well-documented, with significant effects on species and ecosystems`,
+   ],
+   2019: [
+   ` <b>Fact</b>: The belief that quantum computing was still far from practical applications.  
+      **<b>rrent Understanding</b>: Quantum computing research has advanced, with practical applications beginning to emerge in areas such as cryptography and complex simulations`,
+   
+   ` <b>Fact</b>: The assumption that the impact of artificial intelligence on job markets was overstated.  
+      **<b>rrent Understanding</b>: AI is having a significant impact on job markets, with automation and AI technologies affecting various industries`,
+   
+   ` <b>Fact</b>: The idea that climate change effects were limited to environmental changes and not broader societal impacts.  
+      **<b>rrent Understanding</b>: Climate change has broad societal impacts, including on health, economies, and social stability`,
+   ],
+   2020: [
+    `<b>Fact</b>: The belief that the COVID-19 pandemic would be quickly contained and have limited long-term effects.  
+      <b>Current Understanding</b>: The COVID-19 pandemic has had profound and ongoing impacts on global health, economies, and daily life`,
+   
+    `<b>Fact</b>: The assumption that advancements in AI would not significantly alter human interactions and society.  
+      <b>Current Understanding</b>: AI has significantly impacted human interactions and societal structures, including in areas such as communication, work, and privacy`,
+   
+    `<b>Fact</b>: The idea that climate change effects would not lead to rapid and severe consequences.  
+      <b>Current Understanding</b>: Climate change is causing rapid and severe consequences, including extreme weather events and significant impacts on ecosystems and human societies`,
+   ],
+   2021: [
+    `<b>Fact</b>: The belief that mRNA vaccines were experimental and not likely to be widely used.  
+      <b>Current Understanding</b>: mRNA vaccines have been proven effective and widely used in response to COVID-19 and are being explored for other diseases`,
+   
+    `<b>Fact</b>: The assumption that the development of autonomous vehicles would be slow and face significant technical challenges.  
+      <b>Current Understanding</b>: Autonomous vehicles are advancing rapidly, with ongoing developments and trials in various regions`,
+   
+    `<b>Fact</b>: The idea that climate change impacts would be gradual and less noticeable.  
+      <b>Current Understanding</b>: Climate change impacts are becoming increasingly noticeable and severe, with significant effects on weather patterns, ecosystems, and human communities`,
+   ],
+   2022: [
+    `<b>Fact</b>: The belief that the metaverse would not gain widespread traction or become a significant part of digital life.  
+      <b>Current Understanding</b>: The concept of the metaverse is gaining traction, with developments in virtual and augmented reality platforms influencing digital life`,
+   
+    `<b>Fact</b>: The assumption that blockchain technology would remain primarily associated with cryptocurrencies.  
+      <b>Current Understanding</b>: Blockchain technology has expanded into various applications beyond cryptocurrencies, including supply chain management and digital assets`,
+   
+    `<b>Fact</b>: The idea that the long-term effects of climate change would be manageable with existing strategies.  
+      <b>Current Understanding</b>: The long-term effects of climate change require more aggressive and comprehensive strategies to mitigate and adapt to its impacts`,
+   ],
+   2023: [
+    `<b>Fact</b>: The belief that AI language models would remain limited in their ability to understand and generate human-like text.  
+      <b>Current Understanding</b>: AI language models have advanced significantly, demonstrating improved capabilities in understanding and generating human-like text`,
+   
+    `<b>Fact</b>: The assumption that renewable energy adoption would be slower due to technological and economic barriers.  
+      <b>Current Understanding</b>: Renewable energy adoption is accelerating, driven by advancements in technology and decreasing costs`,
+   
+    `<b>Fact</b>: The idea that the impacts of climate change would be evenly distributed across the globe.  
+      <b>Current Understanding</b>: The impacts of climate change are unevenly distributed, with some regions experiencing more severe effects than others`,
+   ],
+   
+    };
+    
 
 function checkFacts() {
     const year = parseInt(document.getElementById('gradYear').value);
